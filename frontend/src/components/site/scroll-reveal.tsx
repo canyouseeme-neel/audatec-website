@@ -1,8 +1,8 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -17,6 +17,19 @@ type RevealProps = {
 
 const defaultEase = [0.22, 1, 0.36, 1] as const;
 
+/**
+ * After the first paint completes, enable scroll-triggered animations.
+ * Before that, `initial={false}` keeps content fully visible (no flash).
+ */
+function useMotionReady() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+  return ready;
+}
+
 export function Reveal({
   children,
   className,
@@ -25,16 +38,12 @@ export function Reveal({
   once = true,
   amount = 0.2,
 }: RevealProps) {
-  const reduceMotion = useReducedMotion();
-
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  const ready = useMotionReady();
 
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y }}
+      initial={ready ? { opacity: 0, y } : false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, amount }}
       transition={{ duration: 0.65, ease: defaultEase, delay }}
@@ -61,11 +70,7 @@ export function StaggerGroup({
   once = true,
   amount = 0.18,
 }: StaggerGroupProps) {
-  const reduceMotion = useReducedMotion();
-
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  const ready = useMotionReady();
 
   return (
     <motion.div
@@ -79,7 +84,7 @@ export function StaggerGroup({
           },
         },
       }}
-      initial="hidden"
+      initial={ready ? "hidden" : false}
       whileInView="visible"
       viewport={{ once, amount }}
     >
@@ -95,12 +100,6 @@ export function StaggerItem({
   children: ReactNode;
   className?: string;
 }) {
-  const reduceMotion = useReducedMotion();
-
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
-
   return (
     <motion.div
       className={cn(className)}

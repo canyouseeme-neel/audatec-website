@@ -172,7 +172,7 @@ function TranscriptPanel({ recording, currentTime }: TranscriptPanelProps) {
   );
 
   useEffect(() => {
-    if (activeRef.current) {
+    if (activeIdx > 0 && activeRef.current) {
       activeRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   }, [activeIdx]);
@@ -259,7 +259,7 @@ export function CallRecordingsShowcase() {
   const [activeId, setActiveId] = useState<string>(callRecordings[0]!.id);
   const [isFollowUp, setIsFollowUp] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
+  const [currentTime, setCurrentTime] = useState(-1);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const recording = callRecordings.find((r) => r.id === activeId) ?? callRecordings[0]!;
@@ -300,7 +300,7 @@ export function CallRecordingsShowcase() {
     if (playing) {
       audio.pause();
     } else {
-      audio.play().catch(() => {});
+      audio.play().catch(() => { });
     }
   };
 
@@ -324,7 +324,7 @@ export function CallRecordingsShowcase() {
         key={effectiveAudioSrc}
         ref={audioRef}
         src={effectiveAudioSrc}
-        preload="metadata"
+        preload="none"
         onTimeUpdate={() => setCurrentTime(audioRef.current?.currentTime ?? 0)}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
@@ -364,15 +364,15 @@ export function CallRecordingsShowcase() {
                 style={
                   r.id === activeId
                     ? {
-                        background: "var(--audit-cyan)",
-                        color: "#03050c",
-                        boxShadow: "0 0 18px rgba(19,182,255,0.30)",
-                      }
+                      background: "var(--audit-cyan)",
+                      color: "#03050c",
+                      boxShadow: "0 0 18px rgba(19,182,255,0.30)",
+                    }
                     : {
-                        background: "rgba(19,182,255,0.09)",
-                        color: "var(--text-secondary)",
-                        border: "1px solid rgba(19,182,255,0.18)",
-                      }
+                      background: "rgba(19,182,255,0.09)",
+                      color: "var(--text-secondary)",
+                      border: "1px solid rgba(19,182,255,0.18)",
+                    }
                 }
               >
                 {SCENARIO_LABELS[r.scenario]}
