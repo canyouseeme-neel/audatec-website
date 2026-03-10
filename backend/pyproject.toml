@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audatec-backend"
+version = "0.1.0"
+description = "FastAPI backend for Audatec voice, audit, CRM, and sentiment workflows."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116.1",
+  "uvicorn[standard]>=0.35.0",
+  "pydantic>=2.11.7",
+  "pydantic-settings>=2.10.1",
+  "email-validator>=2.2.0",
+  "httpx>=0.28.1",
+  "python-dotenv>=1.1.1",
+  "livekit-api>=1.0.5",
+  "supabase>=2.19.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4.1",
+  "ruff>=0.13.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.uvicorn]
+factory = false
+host = "0.0.0.0"
+port = 8000
+
+[tool.ruff]
+line-length = 100

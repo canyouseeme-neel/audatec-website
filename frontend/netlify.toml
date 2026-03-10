@@ -1,0 +1,15 @@
+# Netlify config for Next.js (Audatec frontend)
+# If your repo root is the parent folder, set Base directory to "audatec-web/frontend" in Netlify UI
+
+[build]
+  command = "pnpm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Allow install when lockfile is out of sync with package.json
+  PNPM_FLAGS = "--no-frozen-lockfile"
+  # NEXT_PUBLIC_* vars are intentionally exposed - omit from secrets scan
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_AGENT_NAME,NEXT_PUBLIC_BACKEND_URL,NEXT_PUBLIC_LIVEKIT_URL,NEXT_PUBLIC_SENTIMENT_MODE,NEXT_PUBLIC_WEBSITE_MODE"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

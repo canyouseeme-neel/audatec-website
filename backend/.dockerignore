@@ -1,0 +1,57 @@
+# Virtual environments
+.venv
+venv
+env
+.env.local
+.env.*.local
+
+# Environment files (secrets go in HF Space Settings, not in image)
+.env
+.env.example
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info
+.eggs
+*.egg
+dist
+build
+
+# IDE and editor
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Tests and coverage
+.pytest_cache
+.coverage
+htmlcov
+.tox
+.mypy_cache
+.ruff_cache
+
+# Documentation (optional - remove if you want docs in image)
+*.md
+!README.md
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+.docker
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db

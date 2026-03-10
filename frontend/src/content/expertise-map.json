@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-03-05T23:51:01.249Z",
+  "sourceFiles": [
+    "demo/index.html",
+    "demo/use-cases.html",
+    "demo/customers.html",
+    "demo/contact.html",
+    "demo/privacy.html",
+    "demo/terms.html",
+    "demo/disclaimer.html"
+  ],
+  "company": {
+    "name": "Audatec",
+    "positioning": "AI Relationship Managers",
+    "about": "From first touch to payment collection—AI RMs that handle lead generation, qualification, sales, support, and collections. No handoffs. No drops. One intelligent system across the full lifecycle.",
+    "vision": "One RM. End-to-End. Unlike point solutions that fragment your customer journey, our AI RMs own the entire lifecycle. Same context. Same relationship. Zero handoff friction. Lead Gen Outbound, inbound, referrals—capture every opportunity Qualification Score, segment, nurture until sales-ready Sales Present, negotiate, close with human-like finesse Support Resolve, retain, upsell post-purchase Collection Follow up, negotiate, recover payments 5 Stages. One RM. 0 Context Lost in Handoffs How It Works AI RMs That Think Like Your Best Rep Our AI RMs are trained on your products, your tone, and your processes. They maintain full context across the entire customer journey—from first call to collection follow-up. 🧠 Learn Your products, scripts, and objection handling → 🔄 Engage Orchestrate conversations across the full loop → 📊 Optimize Learn from every interaction, improve continuously See It In Action Full-Loop Coverage Every Stage. One Relationship. See how the same AI RM handles each stage of the customer lifecycle—with full context carried forward. 🎯 Lead Gen → Qualification Traditional Cold calls, separate CRM, leads go stale in queue AI RM Engages, qualifies, scores—nurtures until sales-ready with full history 💰 Sales → Support Traditional Sales hands off to support. Context is lost. Customer repeats their story. AI RM Same RM closes the deal and handles post-sale—knows the full journey 📋 Support → Collection Traditional Collections team starts cold. No prior relationship. Aggressive tones. AI RM Follows up with empathy—knows payment history, past issues, preferred channels What Makes AI RMs Different 🔄 Full-Loop Ownership One RM from lead to collection—no handoffs, no dropped context 📜 Complete History Every call, objection, and commitment remembered across the entire journey 🎯 Stage-Aware Adapts tone and approach—warm in sales, empathetic in support, firm in collection 📈 Revenue Impact More conversions, faster collections, lower churn—full funnel visibility Built for Your Stack Integration with Your Systems Connect AI RMs to your CRM, ERP, billing, and communication platforms. Pre-built connectors for Salesforce, Zoho, freshdesk, and custom REST/API—so every conversation syncs with your existing tech stack. Custom Built Memory Layer Purpose-built memory that persists context across the full customer journey. Stores preferences, commitments, objections, and interaction history—so your AI RM recalls every detail and never asks twice. Observability Real-time dashboards, call analytics, and funnel metrics. Track conversion by stage, monitor AI performance, audit conversations, and export reports—full visibility into your AI RM operations. Omnichannel Conversations Reach customers on their preferred channel—voice, SMS, WhatsApp, email, and chat. One conversation thread across all touchpoints. Context flows seamlessly whether they call, text, or message. Data Privacy & Security Enterprise-grade encryption, access controls, and compliance by design. Data residency options, audit logs, and adherence to regulatory requirements so your customer data stays protected. Fluent in भारतीय भाषाएं AI RMs That Speak Your Market From lead calls to collection follow-ups—our AI RMs handle the full loop in the language your customers prefer. Cultural nuance, regional context, and emotional tone built in. 6+ Languages 1.2B+ Speakers 99% Accuracy हिन्दी Hindi తెలుగు Telugu தமிழ் Tamil বাংলা Bengali मराठी Marathi ગુજરાતી Gujarati Beyond Point Solutions Why Full-Loop Beats Siloed Tools Separate tools for lead gen, sales, support, and collections create gaps. Our AI RMs close the loop. No Handoff Friction Same RM, same context—customer never repeats themselves or falls through the cracks Funnel Visibility See lead gen ROI, conversion rates, support resolution, and collection performance in one view Stage-Appropriate Tone Warm and consultative in sales, empathetic in support, professional and firm in collection Our Vision One Relationship. From First Call to Final Payment.",
+    "locations": [
+      "Mumbai, India"
+    ],
+    "sourceRefs": [
+      "demo/index.html",
+      "demo/contact.html"
+    ]
+  },
+  "expertisePillars": [
+    {
+      "id": "full-loop-ownership",
+      "title": "Full-Loop Ownership",
+      "summary": "One RM from lead to collection—no handoffs, no dropped context",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "complete-history",
+      "title": "Complete History",
+      "summary": "Every call, objection, and commitment remembered across the entire journey",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "stage-aware",
+      "title": "Stage-Aware",
+      "summary": "Adapts tone and approach—warm in sales, empathetic in support, firm in collection",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "revenue-impact",
+      "title": "Revenue Impact",
+      "summary": "More conversions, faster collections, lower churn—full funnel visibility",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    }
+  ],
+  "industries": [
+    {
+      "id": "bfsi",
+      "name": "BFSI",
+      "isBFSI": true,
+      "priority": "high",
+      "signals": [
+        "Lenders, fintechs, and financial platforms",
+        "Profile-based underwriting and fraud detection",
+        "Collections and cross-selling workflows"
+      ],
+      "sourceRefs": [
+        "demo/customers.html"
+      ]
+    },
+    {
+      "id": "telecom-contact-center",
+      "name": "Telecom / Contact Center",
+      "isBFSI": false,
+      "priority": "medium",
+      "signals": [
+        "IVR, IP-PBX, and contact center software",
+        "Inbound and outbound campaign scale"
+      ],
+      "sourceRefs": [
+        "demo/customers.html"
+      ]
+    },
+    {
+      "id": "debt-recovery",
+      "name": "Debt Recovery / Collections",
+      "isBFSI": false,
+      "priority": "high",
+      "signals": [
+        "Ethical debt recovery and legal collections",
+        "Context-aware negotiations and reminders"
+      ],
+      "sourceRefs": [
+        "demo/customers.html",
+        "demo/use-cases.html"
+      ]
+    }
+  ],
+  "offerings": [
+    {
+      "id": "sales",
+      "name": "Sales",
+      "lifecycleStages": [
+        "Lead Gen",
+        "Qualification",
+        "Sales"
+      ],
+      "summary": "Convert more leads with AI RMs that pitch, qualify, and close—without the cold-call fatigue.",
+      "channels": [
+        "Voice",
+        "SMS",
+        "WhatsApp"
+      ],
+      "sourceRefs": [
+        "demo/use-cases.html"
+      ]
+    },
+    {
+      "id": "support",
+      "name": "Support",
+      "lifecycleStages": [
+        "Support"
+      ],
+      "summary": "Resolve issues faster and retain customers—with full context from their entire journey.",
+      "channels": [
+        "Chat"
+      ],
+      "sourceRefs": [
+        "demo/use-cases.html"
+      ]
+    },
+    {
+      "id": "collections",
+      "name": "Collections",
+      "lifecycleStages": [
+        "Collection"
+      ],
+      "summary": "Recover payments faster with AI RMs that remember—and respect—the relationship.",
+      "channels": [
+        "Voice",
+        "SMS",
+        "WhatsApp"
+      ],
+      "sourceRefs": [
+        "demo/use-cases.html"
+      ]
+    }
+  ],
+  "rmCrmAutomationClaims": [
+    {
+      "id": "crm-realtime-logging",
+      "category": "crm",
+      "text": "CRM integration with activities logged in real time.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/use-cases.html"
+      ]
+    },
+    {
+      "id": "stack-integrations",
+      "category": "integrations",
+      "text": "Connect AI RMs to CRM, ERP, billing, and communication platforms with pre-built and custom APIs.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "omnichannel-thread",
+      "category": "omnichannel",
+      "text": "One conversation thread across voice, SMS, WhatsApp, email, and chat.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "zero-touch-crm",
+      "category": "rm-crm",
+      "text": "Zero-Touch CRM updates from transcript-aware conversation workflows.",
+      "confidence": "medium",
+      "sourceRefs": [
+        "demo/use-cases.html",
+        "demo/index.html"
+      ]
+    }
+  ],
+  "complianceAuditClaims": [
+    {
+      "id": "enterprise-security",
+      "category": "security",
+      "text": "Enterprise-grade encryption, access controls, and compliance-by-design operation.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "audit-logs",
+      "category": "audit",
+      "text": "Conversation monitoring and report export enable continuous auditability.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/index.html"
+      ]
+    },
+    {
+      "id": "regulatory-obligation",
+      "category": "legal",
+      "text": "Customers remain responsible for telecom, data-protection, and consumer-protection compliance.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/terms.html",
+        "demo/disclaimer.html"
+      ]
+    },
+    {
+      "id": "privacy-controls",
+      "category": "privacy",
+      "text": "Policy-defined data retention, deletion rights, and international transfer safeguards.",
+      "confidence": "high",
+      "sourceRefs": [
+        "demo/privacy.html"
+      ]
+    }
+  ],
+  "proofPoints": {
+    "metrics": [
+      {
+        "label": "Lifecycle Coverage",
+        "value": "5 stages",
+        "context": "Lead Gen, Qualification, Sales, Support, Collection",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      },
+      {
+        "label": "Context Lost in Handoffs",
+        "value": "0",
+        "context": "Marketing claim from loop section",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      },
+      {
+        "label": "Language Coverage",
+        "value": "6+ languages",
+        "context": "Indian language support",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      },
+      {
+        "label": "Market Reach",
+        "value": "1.2B+ speakers",
+        "context": "Regional language audience",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      },
+      {
+        "label": "Known customer scale",
+        "value": "500K+ registered users",
+        "context": "RP Infotel profile",
+        "sourceRefs": [
+          "demo/customers.html"
+        ]
+      }
+    ],
+    "pastWorks": [
+      {
+        "id": "data-sutram",
+        "company": "Data Sutram",
+        "industry": "BFSI / Financial Intelligence",
+        "summary": "Data Sutram empowers lenders, fintechs, and financial platforms with privacy-first external intelligence across fraud detection, customer acquisition, cross-selling, and collections. Trusted by 50+ companies.",
+        "highlights": [
+          "Power outreach for DS Resolve and DS Collect—contact ability and portfolio monitoring at scale",
+          "Maintain consistent, compliant communication across the full lifecycle",
+          "Integrate with DS Profile and DS Trust for smarter, context-aware conversations"
+        ],
+        "sourceRefs": [
+          "demo/customers.html"
+        ]
+      },
+      {
+        "id": "rp-infotel",
+        "company": "RP Infotel",
+        "industry": "Telecom / Contact Center",
+        "summary": "RP Infotel delivers cutting-edge contact center solutions, IVR systems, IP-PBX, omnichannel software, and telecom infrastructure to 500K+ registered users. A leader in call center and UC solutions across India.",
+        "highlights": [
+          "Seamless integration with contact center and IVR infrastructure",
+          "Scale inbound and outbound campaigns with AI-powered conversations",
+          "Omnichannel reach—voice, chat, email—through a single intelligent layer"
+        ],
+        "sourceRefs": [
+          "demo/customers.html"
+        ]
+      },
+      {
+        "id": "alexa-partners",
+        "company": "Alexa Partners",
+        "industry": "Debt Recovery",
+        "summary": "Alexa Partners operates on a \"No Collection, No Commission\" model, offering end-to-end debt collection, legal collections, and international recovery. With 74+ collectors, 50+ legal professionals, and presence in 60+ Indian cities and 40+ countries.",
+        "highlights": [
+          "Drive follow-ups and negotiation with context-aware, empathetic conversations",
+          "Scale telecalling and reminder campaigns without adding headcount",
+          "Maintain compliance and brand-safe communication across all touchpoints"
+        ],
+        "sourceRefs": [
+          "demo/customers.html"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "demo/index.html",
+      "demo/customers.html"
+    ]
+  },
+  "howItWorks": {
+    "headline": "Zero-Touch CRM + 100% Compliance Audit",
+    "highlights": [
+      {
+        "id": "zero-touch",
+        "category": "automation",
+        "text": "AI RM workflows auto-capture relationship context from first touch to final payment without manual CRM cleanup.",
+        "confidence": "medium",
+        "sourceRefs": [
+          "demo/index.html",
+          "demo/use-cases.html"
+        ]
+      },
+      {
+        "id": "compliance-audit",
+        "category": "audit",
+        "text": "Every interaction is structured for compliance visibility with audit-ready logs and legal controls.",
+        "confidence": "high",
+        "sourceRefs": [
+          "demo/index.html",
+          "demo/terms.html",
+          "demo/privacy.html"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "id": "learn",
+        "title": "Learn",
+        "summary": "Your products, scripts, and objection handling",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      },
+      {
+        "id": "engage",
+        "title": "Engage",
+        "summary": "Orchestrate conversations across the full loop",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      },
+      {
+        "id": "optimize",
+        "title": "Optimize",
+        "summary": "Learn from every interaction, improve continuously",
+        "sourceRefs": [
+          "demo/index.html"
+        ]
+      }
+    ]
+  }
+}

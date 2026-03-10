@@ -1,0 +1,59 @@
+# Docs: https://docs.render.com/infrastructure-as-code
+
+services:
+  # ── Backend (FastAPI) ──────────────────────────────────────────────
+  - type: web
+    name: audatec-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: SENTIMENT_MODE
+        value: mock
+      - key: WEBSITE_MODE
+        value: marketing_plus_demo
+
+  # ── Frontend (Next.js) ────────────────────────────────────────────
+  - type: web
+    name: audatec-frontend
+    runtime: node
+    rootDir: frontend
+    plan: starter
+    buildCommand: pnpm install --no-frozen-lockfile && pnpm run build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NEXT_PUBLIC_LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: BACKEND_URL
+        fromService:
+          name: audatec-backend
+          type: web
+          property: hostport
+      - key: NEXT_PUBLIC_WEBSITE_MODE
+        value: marketing_plus_demo
+      - key: NEXT_PUBLIC_SENTIMENT_MODE
+        value: mock
